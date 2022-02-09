@@ -1,4 +1,5 @@
-﻿using CasaDoCodigo.aula3.antes.Models.ViewModels;
+﻿using CasaDoCodigo.aula3.antes.Models;
+using CasaDoCodigo.aula3.antes.Models.ViewModels;
 using CasaDoCodigo.Models;
 using CasaDoCodigo.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -52,9 +53,9 @@ namespace CasaDoCodigo.Controllers
         }
 
         [HttpPost]
-        public void UpdateQuantidade([FromBody]ItemPedido itemPedido)
+        public UpdateQuantidadeResponse UpdateQuantidade([FromBody]ItemPedido itemPedido)
         {
-            itemPedidoRepository.UpdateQuantidade(itemPedido);
+            return pedidoRepository.UpdateQuantidade(itemPedido);
         }
     }
 }
