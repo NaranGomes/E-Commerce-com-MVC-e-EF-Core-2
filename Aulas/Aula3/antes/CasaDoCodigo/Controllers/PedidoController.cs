@@ -23,6 +23,7 @@ namespace CasaDoCodigo.Controllers
             this.produtoRepository = produtoRepository;
             this.pedidoRepository = pedidoRepository;
             this.itemPedidoRepository = itemPedidoRepository;
+
         }
 
         public IActionResult Carrossel()
@@ -53,7 +54,7 @@ namespace CasaDoCodigo.Controllers
         }
 
         [HttpPost]
-        public UpdateQuantidadeResponse UpdateQuantidade([FromBody]ItemPedido itemPedido)
+        public UpdateQuantidadeResponse UpdateQuantidade([FromBody] ItemPedido itemPedido)
         {
             return pedidoRepository.UpdateQuantidade(itemPedido);
         }
