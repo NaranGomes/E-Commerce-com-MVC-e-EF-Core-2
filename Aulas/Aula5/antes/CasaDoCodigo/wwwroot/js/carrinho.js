@@ -46,7 +46,7 @@
                 linhaDoItem.remove();
             }
 
-            debugger;
+            
         });
     }
 }
